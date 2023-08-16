@@ -105,17 +105,17 @@ class တွေကနေ တစ်ဆင့် object တွေကို တည�
 
 class declaration components
 
-| Name       | Descriptions        | Status     |
-|------------|---------------------|------------|
-| public     | Access modifier     | Optional   |
-| final      | Non-Access modifier | Optional   |
-| class      | Keyword class       | Compulsory |
-| Runner     | Name of class       | Compulsory |
-| extends    | Keyword extends     | Optional   |
-| Persons    | Base class name     | Optional   |
-| implements | Keyword implements  | Optional   |
-| Athlete    | Name of implements  | Optional   |
-| {}         | Curly braces        | Compulsory |
+|    Name    |    Descriptions     |   Status   |
+|:----------:|:-------------------:|:----------:|
+|   public   |   Access modifier   |  Optional  |
+|   final    | Non-Access modifier |  Optional  |
+|   class    |    Keyword class    | Compulsory |
+|   Runner   |    Name of class    | Compulsory |
+|  extends   |   Keyword extends   |  Optional  |
+|  Persons   |   Base class name   |  Optional  |
+| implements | Keyword implements  |  Optional  |
+|  Athlete   | Name of implements  |  Optional  |
+|     {}     |    Curly braces     | Compulsory |
 
 ## Running a Java Program
 
