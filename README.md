@@ -151,10 +151,6 @@ $ javac Person.java
 $ java Person Hello
 ```
 
-```bash
-$ java Person Hello
-``` 
-
 ဒီနေရာမှာဆိုရင် hello ဆိုတဲ့ command သည် args သို့ value အဖြစ်နဲ့ ပေးတာဖြစ်ပါတယ်။
 
 ```bash
