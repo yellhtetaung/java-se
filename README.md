@@ -33,52 +33,52 @@ Java program တစ်ခုက JVM ရှိတဲ့ ဘယ် machine မှ�
 ## Java Editions
 
 - Java SE
-  - Java ဘာသာရပ်၏ အခြေခံ Edition
-  - Desktop Application များအား ရေးသားနိုင်
+    - Java ဘာသာရပ်၏ အခြေခံ Edition
+    - Desktop Application များအား ရေးသားနိုင်
 - Java EE
-  - Enterprise Java Application များအား ရေးသားရန် အခြေခံ Edition
+    - Enterprise Java Application များအား ရေးသားရန် အခြေခံ Edition
 - Java ME
-  - Embedded ပတ်ဝန်းကျင်များ အတွက် Java Edition
+    - Embedded ပတ်ဝန်းကျင်များ အတွက် Java Edition
 
 ## In This Course
 
 - Java Basic
-  - Language Fundamentals
-    - Basic Structure of a Class
-    - Java Data Types
-    - Identifiers and Modifiers
-    - Statements
-  - OOP
+    - Language Fundamentals
+        - Basic Structure of a Class
+        - Java Data Types
+        - Identifiers and Modifiers
+        - Statements
     - OOP
-    - Class & Interfaces
-    - Enum & Annotations
-    - Generics
-  - Essential API
-    - Exceptions
-    - Numbers
-    - Strings
-    - Date & Calendar
-    - Collections
-    - Java IO
-    - Nio 2
-    - Threads
-    - Concurrency
-  - Functional Style
-    - Lambda Expression
-    - Streams API
-    - Functional Programming
-    - Functional Interfaces
+        - OOP
+        - Class & Interfaces
+        - Enum & Annotations
+        - Generics
+    - Essential API
+        - Exceptions
+        - Numbers
+        - Strings
+        - Date & Calendar
+        - Collections
+        - Java IO
+        - Nio 2
+        - Threads
+        - Concurrency
+    - Functional Style
+        - Lambda Expression
+        - Streams API
+        - Functional Programming
+        - Functional Interfaces
 - Database
-  - Relational Database
-  - Data Modeling
-  - Simple SQL
-  - JDBC API
+    - Relational Database
+    - Data Modeling
+    - Simple SQL
+    - JDBC API
 - GUI
-  - Scene Graph
-  - Layouts
-  - Controls
-  - Styles and Effects
-  - Animations
+    - Scene Graph
+    - Layouts
+    - Controls
+    - Styles and Effects
+    - Animations
 
 ## Basic Structure of a Class
 
@@ -106,7 +106,7 @@ class တွေကနေ တစ်ဆင့် object တွေကို တည�
 class declaration components
 
 |    Name    |    Descriptions     |   Status   |
-| :--------: | :-----------------: | :--------: |
+|:----------:|:-------------------:|:----------:|
 |   public   |   Access modifier   |  Optional  |
 |   final    | Non-Access modifier |  Optional  |
 |   class    |    Keyword class    | Compulsory |
@@ -416,8 +416,8 @@ Variable တွေ declare လုပ်ထားတဲ့ နေရာပေါ�
 အမျိုးအစားနှစ်မျိုးခွဲနိုင်ပါတယ်။
 
 - Global Variables
-  - Static Variables
-  - Instance Variables
+    - Static Variables
+    - Instance Variables
 - Local Variables
 
 ## Global Variables
@@ -622,8 +622,8 @@ keyword ကို သုံးပြီးတော့ `this.message` ဆို�
 
 - Method များအား၊ အသုံးချလုပ်ဆောင်ချက်များနှင့် Object တွေရဲ့ Behaviour များအား ဖော်ပြရာတွင် အသုံးပြုပါသည်။
 - Method တစ်ခုအား ရေးရာတွင် အောက်ပါအချက်များအား စဥ်းစားထားရပါမည်။
-  - ထို Method အား အသုံးပြု၍ ဘာပြန်ရနိုင်သလဲ (Return Type)
-  - Method အား အလုပ်လုပ်စေရန် ဘာပေးရမှာလဲ။ (Arguments)
+    - ထို Method အား အသုံးပြု၍ ဘာပြန်ရနိုင်သလဲ (Return Type)
+    - Method အား အလုပ်လုပ်စေရန် ဘာပေးရမှာလဲ။ (Arguments)
 
 ### Writing Method
 
@@ -632,7 +632,7 @@ public static void main(String[]args){}
 ```
 
 |  Name  |     Description     |
-| :----: | :-----------------: |
+|:------:|:-------------------:|
 | public |   Access Modifier   |
 | static | Non-Access Modifier |
 |  void  |     Return type     |
@@ -670,3 +670,50 @@ public class MethodTest {
 
 - Instance Method
 - Static Method
+
+### Static Method
+
+```java
+public class MethodTest {
+    public static void main(String[] args) {
+        sayHello();
+        showAddResult(10, 50);
+
+        int result = add(10, 10);
+        System.out.println(result);
+
+        OtherMethod.showMessage("Using Other Methods.");
+    }
+
+    static void showAddResult(int a, int b) {
+        System.out.println(a + b);
+    }
+
+    static void sayHello() {
+        System.out.println("Hello");
+    }
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+static method တွေကို ဘာဖြစ်လို့ ရေးရတာလဲ ဆိုရင် mian ဆိုတဲ့ method ကနေပြန်ခေါ်သုံးချင်လို့ပဲ ဖြစ်ပါတယ်။ main သည်လည်း
+static method ဖြစ်တဲ့အတွက်ကြောင့် static method ကနေပြီးတော့ ပြန်ခေါ်သုံးလို့ရတာတွေသည် static method တွေကိုပဲ
+ပြန်ခေါ်သုံးလို့ရတဲ့ အတွက်ကြောင့်ပဲ ဖြစ်ပါတယ်။ static method က instance methods တွေကို ခေါ်သုံးလို့မရသလို instance
+variable တွေကိုလည်း Access လုပ်လို့မရပါဘူး။ static method တွေသည် object တွေနဲ့ပဲ ဆိုင်ပါတယ်။
+
+### Instance Method
+
+static keyword မပါတာတွေသည် instance method တွေဖြစ်ကြပါတယ်။ Method တွေရေးတဲ့ အခါမှာ object တွေရဲ့ state တွေကို
+ပြန်ပြီးတော့ access လုပ်စရာလိုတယ်ဆိုရင်တော့ Instance Method တွေကို အသုံးပြုရပါမယ်။ Instance Method တွေကတော့ Instance
+Methods, Instance Variable, Static Methods and Static Variable တွေအားလုံးကို Access လုပ်လို့ရပါတယ်။
+
+## Method Overloading
+
+Variable တွေရဲ့ Identifier နာမည်တွေနဲ့ JVM နဲ့ Compiler က ပြန်ပြီးတော့ Identify လုပ်ပါတယ်။ အဲ့ဒါကြောင့် scope တူတဲ့
+နာမည်တူတဲ့ variable နှစ်ခုကို ရေးလို့မရပါဘူး။ scope မတူရင်တော့ နာမည်တူတဲ့ variable နှစ်ခုကို ရေးလို့ရပါတယ်။
+အဲ့အခါမှာတော့ global scope ထဲမှာရှိတဲ့ variable ကို local scope ထဲမှာရှိတဲ့ variable က hide လုပ်သွားပြီတော့ Variable
+Hiding ဖြစ်စေနိုင်ပါတယ်။ JVM နဲ့ Compiler က method တစ်ခုဖြစ်ပါတယ်ဆိုတာကို method name နဲ့ သူနဲ့ပါလာတဲ့ argument list ကို
+ကြည့်ပြီးတော့ method တစ်ခုဖြစ်ပါတယ်လို့ သတ်မှတ်ပါတယ်။
