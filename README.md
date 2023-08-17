@@ -203,6 +203,18 @@ public class Person {
         Student aung = new Student();
     }
 }
+
+class Student {
+    // State
+    String name;
+    int age;
+
+    // behaviour
+    void greet() {
+        System.out.println("My name is " + name);
+        System.out.println("My age is " + age);
+    }
+}
 ```
 
 ဒီအဆင့်မှာဆိုရင်တော့ aung ဆိုတဲ့ Student object တစ်ခုကို တည်ဆောက်လို့ပြီးသွားပြီပဲဖြစ်ပါတယ်။ aung ရဲ့ အရှေ့မှာပါတဲ့
@@ -217,6 +229,18 @@ public class Person {
         aung.age = 20;
     }
 }
+
+class Student {
+    // State
+    String name;
+    int age;
+
+    // behaviour
+    void greet() {
+        System.out.println("My name is " + name);
+        System.out.println("My age is " + age);
+    }
+}
 ```
 
 aung ဆိုတဲ့ Student object ထဲမှာရှိတဲ့ behaviour ကို ပြန်သုံးချင်ရင်တော့ `aung.greet()` ဆိုပြီးတော့ ယခုလိုသုံးရပါတယ်။
@@ -229,6 +253,18 @@ public class Person {
         aung.age = 20;
 
         aung.greet();
+    }
+}
+
+class Student {
+    // State
+    String name;
+    int age;
+
+    // behaviour
+    void greet() {
+        System.out.println("My name is " + name);
+        System.out.println("My age is " + age);
     }
 }
 ```
@@ -298,3 +334,44 @@ My age is 20
 အရင်ထွက်လာရတာလဲဆိုရင်တော့ `maung.greet()` ဖြစ်တဲ့ maung ရဲ့ method ကို အရင် သုံးထားလို့ပဲ ဖြစ်ပါတယ်။ ဒီ result
 ကိုကြည့်မယ်ဆိုရင် maung နှင့် aung ရဲ့ object တွေဟာ သူတို့ရဲ့ state တွေပေါ်မှာ မူတည်ပြီးတော့ သူတို့ရဲ့
 အလုပ်လုပ်ပုံတွေကလည်း မတူဘူးဆိုတာကို မြင်တွေ့ရမှာပဲ ဖြစ်ပါတယ်။
+
+## Creating and Using Variable
+
+![variable](assets/variables.png)
+
+- Java မှာတော့ Data တွေနဲ့ Logic တွေဖြစ်တဲ့ function တွေကို object ဆိုတဲ့ unit တစ်ခုမှာ သိမ်းပြီးတော့ အသုံးပြုပါတယ်။
+  object တွေရဲ့ လက်ရှိအနေအထား state တွေကို ဖော်ပြဖို့အတွက် variable တွေကို အသုံးပြုပါတယ်။
+- variable တစ်ခုကို စပြီးတော့ declare လုပ်တော့မယ်ဆိုရင် variable type နဲ့ variable name ကိုတွဲပြီးတော့ declare
+  လုပ်ရပါတယ်။ variable ကို declare လုပ်တော့မယ်ဆိုရင် ယခုလိုပဲ လုပ်ရပါတယ်။
+
+```java
+class Student {
+    String name;
+    int age;
+}
+```
+
+- variable တွေကို assign လုပ်ချင်ရင်တော့ name နှင့် age သည် object တွေရဲ့ state တွေဖြစ် အတွက်ကြောင့် object
+  တွေကနေတစ်ဆင့် ပြန်ပြီးတော့ assign လုပ်ပေးရမှာပဲဖြစ်ပါတယ်။
+
+```java
+public class Person {
+    public static void main(String[] args) {
+        Student aung = new Student();
+    }
+}
+
+class Student {
+    String name;
+    int age;
+}
+```
+
+- ဒီအဆင့်မှာဆိုရင်လည်း `Student aung` သည် variable တစ်ခုပဲဖြစ်ပါတယ်။ variable တွေကို assign လုပ်ချင်တဲ့အတွက်ကြောင့်
+  aung ဆိုတဲ့ student object တစ်ခုကို အရင် create လုပ်ပါတယ်။ `Student aung = new Student()` ဒီလိုမျိုး object တစ်ခု
+  create လုပ်ပြီးတာနဲ့ တစ်ပြိုင်နက် JVM က ဘယ်လိုအလုပ်လုပ်သလဲ ဆိုရင် **Stack memory** မှာ aung ဆိုတဲ့ နာမည်နဲ့ variable
+  တစ်ခုကို create လုပ်လိုက်ပါတယ်။ သူရဲ့ type ကတော့ student ဖြစ်ပါတယ်ဆိုပြီးတော့ variable တစ်ခုကို တည်ဆောက်လိုက်ပါတယ်။
+  ပြီးတော့မှာ **Heap memory** ပေါ်မှာ `new Student()` ဆိုတဲ့ object ကို evalute လုပ်ပြီးတော့ ၎င်းရဲ့ heap address ကို
+  ခုနက create လုပ်ထားတဲ့ **Stack memory** ပေါ်မှာရှိတဲ့ aung ဆိုတဲ့ variable မှာ သိမ်းပါတယ်။
+
+![how to store variable in memory](assets/store-variable-memory.png)
