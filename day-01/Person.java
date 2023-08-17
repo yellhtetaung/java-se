@@ -10,6 +10,8 @@ public class Person {
 
         maung.greet();
         aung.greet();
+
+        System.out.println(aung.name);
     }
 }
 

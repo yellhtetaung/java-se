@@ -337,12 +337,11 @@ My age is 20
 
 ## Creating and Using Variable
 
-![variable](assets/variables.png)
+Java မှာတော့ Data တွေနဲ့ Logic တွေဖြစ်တဲ့ function တွေကို object ဆိုတဲ့ unit တစ်ခုမှာ သိမ်းပြီးတော့ အသုံးပြုပါတယ်။
+object တွေရဲ့ လက်ရှိအနေအထား state တွေကို ဖော်ပြဖို့အတွက် variable တွေကို အသုံးပြုပါတယ်။
 
-- Java မှာတော့ Data တွေနဲ့ Logic တွေဖြစ်တဲ့ function တွေကို object ဆိုတဲ့ unit တစ်ခုမှာ သိမ်းပြီးတော့ အသုံးပြုပါတယ်။
-  object တွေရဲ့ လက်ရှိအနေအထား state တွေကို ဖော်ပြဖို့အတွက် variable တွေကို အသုံးပြုပါတယ်။
-- variable တစ်ခုကို စပြီးတော့ declare လုပ်တော့မယ်ဆိုရင် variable type နဲ့ variable name ကိုတွဲပြီးတော့ declare
-  လုပ်ရပါတယ်။ variable ကို declare လုပ်တော့မယ်ဆိုရင် ယခုလိုပဲ လုပ်ရပါတယ်။
+variable တစ်ခုကို စပြီးတော့ declare လုပ်တော့မယ်ဆိုရင် variable type နဲ့ variable name ကိုတွဲပြီးတော့ declare
+လုပ်ရပါတယ်။ variable ကို declare လုပ်တော့မယ်ဆိုရင် ယခုလိုပဲ လုပ်ရပါတယ်။
 
 ```java
 class Student {
@@ -351,8 +350,8 @@ class Student {
 }
 ```
 
-- variable တွေကို assign လုပ်ချင်ရင်တော့ name နှင့် age သည် object တွေရဲ့ state တွေဖြစ် အတွက်ကြောင့် object
-  တွေကနေတစ်ဆင့် ပြန်ပြီးတော့ assign လုပ်ပေးရမှာပဲဖြစ်ပါတယ်။
+variable တွေကို assign လုပ်ချင်ရင်တော့ name နှင့် age သည် object တွေရဲ့ state တွေဖြစ် အတွက်ကြောင့် object
+တွေကနေတစ်ဆင့် ပြန်ပြီးတော့ assign လုပ်ပေးရမှာပဲဖြစ်ပါတယ်။
 
 ```java
 public class Person {
@@ -367,11 +366,98 @@ class Student {
 }
 ```
 
-- ဒီအဆင့်မှာဆိုရင်လည်း `Student aung` သည် variable တစ်ခုပဲဖြစ်ပါတယ်။ variable တွေကို assign လုပ်ချင်တဲ့အတွက်ကြောင့်
-  aung ဆိုတဲ့ student object တစ်ခုကို အရင် create လုပ်ပါတယ်။ `Student aung = new Student()` ဒီလိုမျိုး object တစ်ခု
-  create လုပ်ပြီးတာနဲ့ တစ်ပြိုင်နက် JVM က ဘယ်လိုအလုပ်လုပ်သလဲ ဆိုရင် **Stack memory** မှာ aung ဆိုတဲ့ နာမည်နဲ့ variable
-  တစ်ခုကို create လုပ်လိုက်ပါတယ်။ သူရဲ့ type ကတော့ student ဖြစ်ပါတယ်ဆိုပြီးတော့ variable တစ်ခုကို တည်ဆောက်လိုက်ပါတယ်။
-  ပြီးတော့မှာ **Heap memory** ပေါ်မှာ `new Student()` ဆိုတဲ့ object ကို evalute လုပ်ပြီးတော့ ၎င်းရဲ့ heap address ကို
-  ခုနက create လုပ်ထားတဲ့ **Stack memory** ပေါ်မှာရှိတဲ့ aung ဆိုတဲ့ variable မှာ သိမ်းပါတယ်။
+ဒီအဆင့်မှာဆိုရင်လည်း `Student aung` သည် variable တစ်ခုပဲဖြစ်ပါတယ်။ variable တွေကို assign လုပ်ချင်တဲ့အတွက်ကြောင့်
+aung ဆိုတဲ့ student object တစ်ခုကို အရင် create လုပ်ပါတယ်။ `Student aung = new Student()` ဒီလိုမျိုး object တစ်ခု
+create လုပ်ပြီးတာနဲ့ တစ်ပြိုင်နက် JVM က ဘယ်လိုအလုပ်လုပ်သလဲ ဆိုရင် **Stack memory** မှာ aung ဆိုတဲ့ နာမည်နဲ့ variable
+တစ်ခုကို create လုပ်လိုက်ပါတယ်။ သူရဲ့ type ကတော့ student ဖြစ်ပါတယ်ဆိုပြီးတော့ variable တစ်ခုကို တည်ဆောက်လိုက်ပါတယ်။
+ပြီးတော့မှာ **Heap memory** ပေါ်မှာ `new Student()` ဆိုတဲ့ object ကို evalute လုပ်ပြီးတော့ ၎င်းရဲ့ heap address ကို
+ခုနက create လုပ်ထားတဲ့ **Stack memory** ပေါ်မှာရှိတဲ့ aung ဆိုတဲ့ variable မှာ သိမ်းပါတယ်။
 
 ![how to store variable in memory](assets/store-variable-memory.png)
+
+- ဒါကြောင့် ၎င်း variable type တွေကို reference variable တွေလို့ခေါ်ပါတယ်။
+
+```java
+public class Person {
+    public static void main(String[] args) {
+        Student aung = new Student();
+        aung.name = "Aung Aung";
+        aung.age = 20;
+
+        Student maung = new Student();
+        maung.name = "Maung Maung";
+        maung.age = 25;
+
+        maung.greet();
+        aung.greet();
+    }
+}
+
+class Student {
+    String name;
+    int age;
+
+    void greet() {
+        System.out.println("My name is " + name);
+        System.out.println("My age is " + age);
+    }
+}
+```
+
+ဒီအဆင့်မှာဆိုရင် aung ဆို variable တစ်ခုကို create လုပ်တယ်။ ပြီးတော့ maung ဆိုတဲ့ variable တစ်ခုကို create လုပ်တယ်။
+variable တွေက မတူညီတဲ့ အတွက် သူတို့တွေရဲ့ state တွေလည်း သီခြားဖြစ်နေပါလိမ့်မယ်။
+
+![variable](assets/variables.png)
+
+Variable တွေ declare လုပ်ထားတဲ့ နေရာပေါ်မူတည်ပြီးတော့ scope တွေလည်း ကွဲခြားပါတယ်။ scope တွေအပေါ်မူတည်ပြီးတော့ variable
+တွေရဲ့ အသုံးပြုနိုင်တဲ့ အတိုင်းအတာတွေလည်း ကွဲပြားပါတယ်။ scope တွေပေါ်မူတည်ပြီးတော့ variable တွေကို
+အမျိုးအစားနှစ်မျိုးခွဲနိုင်ပါတယ်။
+
+- Global Variables
+    - Static Variables
+    - Instance Variables
+- Local Variables
+
+## Global Variables
+
+- Java ဘာသာရပ်တွင် Declare လုပ်ထားသော နေရာ တွင်မူတည်ပြီး Variable များ၏ အသုံးပြုနိုင်တဲ့ နေရာတွေသည်လည်း ကွာခြားပါသည်
+- Class Body အောက်တည့်တည့်တွင် Declare လုပ်ထားသော Variable များသည် Class သို့မဟုတ် Object တစ်ခု JVM အပေါ်တွင်
+  တည်ရှိနေသည့် ကာလ အတွင်း အဆိုပါ Variable သည်လဲ တည်ရှိနေပါမည်
+- အဆိုပါ Variable များအား Global Variable ဟုခေါ်ပါသည်
+- Global Variable များအား Class အတွင်းရှိ မည်သည် Block များမှ မဆို အသုံးပြုနိုင်မည် ဖြစ်သည်
+- Global Variable များအား အသုံးလိုသည့် အမျိုးအစား အပေါ်မူတည်ပြီး Static Variable နှင့် Instance Variable ဟု
+  ခွဲခြားနိုင်ပါသည်
+
+```java
+public class Variable {
+    int data; // Instance Variable | Object Variable
+    static int COUNT; // Static Variable
+    private int privteInt;
+    static final int FINAL_INT = 10;
+}
+```
+
+Global Variable များအား တန်ဖိုးသတ်မှတ်ထားခြင်းမရှိပါက Compiler မှ Default တန်ဖိုးကို သတ်မှတ်ပေးပါမည်။
+
+### Instance Variable or Object Variable
+
+```java
+public class Variable {
+    int data;
+}
+```
+
+Datatype ရဲ့ အရှေ့မှာ ဘာမှ မရေးထားရင် ၎င်း variable တွေသည် object တွေရဲ့ state တွေကို ဖော်ပြနိုင်တဲ့အတွက်ကြောင့်
+Instance Variable ဒါမှမဟုတ် Object Variable လို့ခေါ်ပါတယ်။ Instance Variable တွေဟာ object တစ်ခုချင်စီနဲ့ သက်ဆိုင်ပါတယ်။
+
+### Static Variable
+
+```java
+public class Variable {
+    static int COUNT;
+}
+```
+
+Datatype ရဲ့ အရှေ့မှာ static ရေးထားတဲ့ အတွက်ကြောင့် ၎င်း variable သည် object variable အနေနဲ့ အသုံးမပြုပဲ class ထဲမှာပဲ
+အသုံးပြုတဲ့အတွက်ကြောင့် Static Variable လို့ခေါ်ပါတယ်။
+
