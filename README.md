@@ -46,7 +46,7 @@ Java program တစ်ခုက JVM ရှိတဲ့ ဘယ် machine မှ�
     - Language Fundamentals
         - Basic Structure of a Class
         - Java Data Types
-        - Identifis and Madifiers
+        - Identifiers and Modifiers
         - Statements
     - OOP
         - OOP

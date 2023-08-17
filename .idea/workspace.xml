@@ -5,15 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="564b5716-4752-4c66-9237-a4d06fb8dc12" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/day-01/MethodTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/day-01/MethodTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day-01/Counter.class" beforeDir="false" afterPath="$PROJECT_DIR$/day-01/Counter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day-01/CounterTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/day-01/CounterTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day-01/CounterTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/day-01/CounterTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day-01/LocalVariableTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/day-01/LocalVariableTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/day-01/LocalVariableTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/day-01/LocalVariableTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,16 +36,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/Users/zen/Development/Tutorial/Java/java-se",
-    "settings.editor.selected.configurable": "preferences.editor"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/zen/Development/Tutorial/Java/java-se&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.editor&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
