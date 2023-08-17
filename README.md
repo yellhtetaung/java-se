@@ -375,7 +375,7 @@ create လုပ်ပြီးတာနဲ့ တစ်ပြိုင်နက
 
 ![how to store variable in memory](assets/store-variable-memory.png)
 
-- ဒါကြောင့် ၎င်း variable type တွေကို reference variable တွေလို့ခေါ်ပါတယ်။
+ဒါကြောင့် ၎င်း variable type တွေကို reference variable တွေလို့ခေါ်ပါတယ်။
 
 ```java
 public class Person {
@@ -474,8 +474,10 @@ C1 Count is 1
 C2 Count is 1
 ```
 
-Datatype ရဲ့ အရှေ့မှာ ဘာမှ မရေးထားရင် ၎င်း variable တွေသည် object တွေရဲ့ state တွေကို ဖော်ပြနိုင်တဲ့အတွက်ကြောင့်
-Instance Variable ဒါမှမဟုတ် Object Variable လို့ခေါ်ပါတယ်။ Instance Variable တွေဟာ object တစ်ခုချင်စီနဲ့ သက်ဆိုင်ပါတယ်။
+Datatype ရဲ့ အရှေ့မှာ ဘာမှ မရေးထားရင် ၎င်း variable တွေသည် object
+တွေရဲ့ state တွေကို ဖော်ပြနိုင်တဲ့အတွက်ကြောင့်
+Instance Variable ဒါမှမဟုတ် Object Variable လို့ခေါ်ပါတယ်။ Instance Variable တွေဟာ object တစ်ခုချင်စီနဲ့သာ
+သက်ဆိုင်ပါတယ်။
 
 ### Static Variable
 

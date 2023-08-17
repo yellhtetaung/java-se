@@ -12,8 +12,7 @@ public class CounterTest {
 }
 
 class Counter {
-    int count;
-
+    static int count;
 
     public void countUp() {
         count++;
