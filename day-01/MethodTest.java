@@ -3,8 +3,13 @@ public class MethodTest {
         sayHello();
         showAddResult(10, 50);
 
+        MethodTest obj = new MethodTest();
+        obj.showAddResult(10, 5);
+
         int result = add(10, 10);
         System.out.println(result);
+
+        OtherMethod.showMessage("Using Other Methods.");
     }
 
     static void showAddResult(int a, int b) {
