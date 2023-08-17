@@ -617,3 +617,56 @@ Global Variable
 
 Instance Variable & Object Variable တွေကို ပြန်ခေါ်သုံးမယ်ဆိုရင်တော့ ၎င်း object ရဲ့ owner ကို reference လုပ်တဲ့ `this`
 keyword ကို သုံးပြီးတော့ `this.message` ဆိုပြီတော့ ပြန်သုံးပေးရမှာပဲဖြစ်ပါတယ်။
+
+## Methods
+
+- Method များအား၊ အသုံးချလုပ်ဆောင်ချက်များနှင့် Object တွေရဲ့ Behaviour များအား ဖော်ပြရာတွင် အသုံးပြုပါသည်။
+- Method တစ်ခုအား ရေးရာတွင် အောက်ပါအချက်များအား စဥ်းစားထားရပါမည်။
+    - ထို Method အား အသုံးပြု၍ ဘာပြန်ရနိုင်သလဲ (Return Type)
+    - Method အား အလုပ်လုပ်စေရန် ဘာပေးရမှာလဲ။ (Arguments)
+
+### Writing Method
+
+```java
+public static void main(String[]args){}
+```
+
+|  Name  |     Description     |
+|:------:|:-------------------:|
+| public |   Access Modifier   |
+| static | Non-Access Modifier |
+|  void  |     Return type     |
+|  main  |     Method Name     |
+| String |      Arguments      |
+|  args  |     Method Body     |
+
+- Method များတွင် Return Type အား ရေးသားထားပါက Method Body ၏ နောက်ဆုံးတွင် Type တူသော တန်ဖိုးတစ်ခုအား Return လုပ်ရမည်။
+- Return လုပ်ရန် မလိုအပ်သော Method များဆိုပါက၊ Return Type နေရာတွင် void ဟုရေးသားရပါမည်။
+- Argument များလည် မလိုအပ်ပါက () ကိုသာ ရေးသားရပါမည်။
+
+```java
+public class MethodTest {
+    public static void main(String[] args) {
+        showAddResult(1, 1);
+        sayHello();
+        System.out.println(add(1, 4));
+    }
+
+    static void showAddResult(int a, int b) {
+        System.out.println(a + b);
+    }
+
+    static void sayHello() {
+        System.out.println("Hello");
+    }
+
+    static int add(int a, int b) {
+        return a + b;
+    }
+}
+```
+
+## Type of Methods
+
+- Instance Method
+- Static Method

@@ -1,5 +1,4 @@
 public class LocalVariableTest {
-
     String message = "Global Variable";
 
     public void showMessage(String message) {
