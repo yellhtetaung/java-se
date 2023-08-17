@@ -33,52 +33,52 @@ Java program တစ်ခုက JVM ရှိတဲ့ ဘယ် machine မှ�
 ## Java Editions
 
 - Java SE
-  - Java ဘာသာရပ်၏ အခြေခံ Edition
-  - Desktop Application များအား ရေးသားနိုင်
+    - Java ဘာသာရပ်၏ အခြေခံ Edition
+    - Desktop Application များအား ရေးသားနိုင်
 - Java EE
-  - Enterprise Java Application များအား ရေးသားရန် အခြေခံ Edition
+    - Enterprise Java Application များအား ရေးသားရန် အခြေခံ Edition
 - Java ME
-  - Embedded ပတ်ဝန်းကျင်များ အတွက် Java Edition
+    - Embedded ပတ်ဝန်းကျင်များ အတွက် Java Edition
 
 ## In This Course
 
 - Java Basic
-  - Language Fundamentals
-    - Basic Structure of a Class
-    - Java Data Types
-    - Identifis and Madifiers
-    - Statements
-  - OOP
+    - Language Fundamentals
+        - Basic Structure of a Class
+        - Java Data Types
+        - Identifis and Madifiers
+        - Statements
     - OOP
-    - Class & Interfaces
-    - Enum & Annotations
-    - Generics
-  - Essential API
-    - Exceptions
-    - Numbers
-    - Strings
-    - Date & Calendar
-    - Collections
-    - Java IO
-    - Nio 2
-    - Threads
-    - Concurrency
-  - Functional Style
-    - Lambda Expression
-    - Streams API
-    - Functional Programming
-    - Functional Interfaces
+        - OOP
+        - Class & Interfaces
+        - Enum & Annotations
+        - Generics
+    - Essential API
+        - Exceptions
+        - Numbers
+        - Strings
+        - Date & Calendar
+        - Collections
+        - Java IO
+        - Nio 2
+        - Threads
+        - Concurrency
+    - Functional Style
+        - Lambda Expression
+        - Streams API
+        - Functional Programming
+        - Functional Interfaces
 - Database
-  - Relational Database
-  - Data Modeling
-  - Simple SQL
-  - JDBC API
+    - Relational Database
+    - Data Modeling
+    - Simple SQL
+    - JDBC API
 - GUI
-  - Scene Graph
-  - Layouts
-  - Controls
-  - Styles and Effects
-  - Animations
+    - Scene Graph
+    - Layouts
+    - Controls
+    - Styles and Effects
+    - Animations
 
 ## Basic Structure of a Class
 
@@ -106,7 +106,7 @@ class တွေကနေ တစ်ဆင့် object တွေကို တည�
 class declaration components
 
 |    Name    |    Descriptions     |   Status   |
-| :--------: | :-----------------: | :--------: |
+|:----------:|:-------------------:|:----------:|
 |   public   |   Access modifier   |  Optional  |
 |   final    | Non-Access modifier |  Optional  |
 |   class    |    Keyword class    | Compulsory |
@@ -407,6 +407,8 @@ class Student {
 ဒီအဆင့်မှာဆိုရင် aung ဆို variable တစ်ခုကို create လုပ်တယ်။ ပြီးတော့ maung ဆိုတဲ့ variable တစ်ခုကို create လုပ်တယ်။
 variable တွေက မတူညီတဲ့ အတွက် သူတို့တွေရဲ့ state တွေလည်း သီခြားဖြစ်နေပါလိမ့်မယ်။
 
+## Variable Scope
+
 ![variable](assets/variables.png)
 
 Variable တွေ declare လုပ်ထားတဲ့ နေရာပေါ်မူတည်ပြီးတော့ scope တွေလည်း ကွဲခြားပါတယ်။ scope တွေအပေါ်မူတည်ပြီးတော့ variable
@@ -414,8 +416,8 @@ Variable တွေ declare လုပ်ထားတဲ့ နေရာပေါ�
 အမျိုးအစားနှစ်မျိုးခွဲနိုင်ပါတယ်။
 
 - Global Variables
-  - Static Variables
-  - Instance Variables
+    - Static Variables
+    - Instance Variables
 - Local Variables
 
 ## Global Variables
@@ -442,9 +444,34 @@ Global Variable များအား တန်ဖိုးသတ်မှတ်
 ### Instance Variable or Object Variable
 
 ```java
-public class Variable {
-    int data;
+public class CounterTest {
+    public static void main(String[] args) {
+        Counter c1 = new Counter();
+        c1.countUp();
+
+        Counter c2 = new Counter();
+        c2.countUp();
+
+        System.out.println("C1 Count is " + c1.count);
+        System.out.println("C2 Count is " + c2.count);
+    }
 }
+
+class Counter {
+    int count;
+
+
+    public void countUp() {
+        count++;
+    }
+}
+```
+
+Result
+
+```text
+C1 Count is 1
+C2 Count is 1
 ```
 
 Datatype ရဲ့ အရှေ့မှာ ဘာမှ မရေးထားရင် ၎င်း variable တွေသည် object တွေရဲ့ state တွေကို ဖော်ပြနိုင်တဲ့အတွက်ကြောင့်
@@ -453,10 +480,138 @@ Instance Variable ဒါမှမဟုတ် Object Variable လို့ခေ
 ### Static Variable
 
 ```java
-public class Variable {
-    static int COUNT;
+public class CounterTest {
+    public static void main(String[] args) {
+        Counter c1 = new Counter();
+        c1.countUp();
+
+        Counter c2 = new Counter();
+        c2.countUp();
+
+        System.out.println("C1 Count is " + c1.count);
+        System.out.println("C2 Count is " + c2.count);
+    }
+}
+
+class Counter {
+    static int count;
+
+
+    public void countUp() {
+        count++;
+    }
 }
 ```
 
-Datatype ရဲ့ အရှေ့မှာ static ရေးထားတဲ့ အတွက်ကြောင့် ၎င်း variable သည် object variable အနေနဲ့ အသုံးမပြုပဲ class ထဲမှာပဲ
-အသုံးပြုတဲ့အတွက်ကြောင့် Static Variable လို့ခေါ်ပါတယ်။
+Result
+
+```text
+C1 Count is 2
+C2 Count is 2
+```
+
+Datatype ရဲ့ အရှေ့မှာ static keyword ရေးထားတဲ့ အတွက်ကြောင့် ၎င်း variable သည် object variable အနေနဲ့ အသုံးမပြုပဲ class
+ထဲမှာပဲ အသုံးပြုတဲ့အတွက်ကြောင့် Static Variable လို့ခေါ်ပါတယ်။ Static Variable တွေဟာ class များနှင့်သာ သက်ဆိုင်တဲ့
+အတွက်ကြောင့် Class Variable တွေလို့လည်း ခေါ်ပါတယ်။ Object ဆောက်ရာတွင် static variable များအား copy
+ယူသွားခြင်းမရှိသောကြောင့် static variable တွေဟာ application တစ်ခုလုံးမှာ တစ်ခုတည်းသာရှိပါတယ်။
+
+## Local Variable
+
+- Class တစ်ခု၏ method ဒါမှမဟုတ် Block တစ်ခုခု အတွင်းတွင် Declare လုပ်ထားသော Variable များသည် ၎င်းတို့ကို Declare
+  လုပ်ထားသော နေရာမှ လက်ရှိ Block ၏ နောက်ဆုံးနေရာအထိသာ အသုံးပြုနိုင်သည်။
+- ထိုကဲ့သို့ Variable များကို Local Variable ဟုခေါ်ပါသည်။
+- Local Variable များအား Compiler မှ Default တန်ဖိုးများကို ဖြည့်စွက်ပေးနိုင်ခြင်းမရှိသောကြောင့် အသုံးမပြုခင်
+  တန်ဖိုးတစ်ခုခုကို Assign လုပ်ပေးရန်လိုအပ်ပါသည်။
+- Local Variable များအား Local Scope အတွင်း ယာယီတန်ဖိုးများအား မှတ်သားထားထားရန် အသုံးပြုပါသည်။
+- Local Variable တွေကို scope တစ်ခုတည်းမှာ variable name တွေတူနေလို့ မရပါဘူး။ scope မတူရင်တော့ ရေးလို့ရပါတယ်။
+
+```java
+public class LocalVariableTest {
+
+    static String message = "Global Variable";
+
+    public static void showMessage(String message) {
+        System.out.println(message);
+    }
+
+    public static void doSomething() {
+        String message = "Do Something";
+        System.out.println(message);
+    }
+
+    public static void main(String[] args) {
+        doSomething();
+    }
+}
+```
+
+Result
+
+```text
+Do Something
+```
+
+ဒီနေရာမှာ `Do Something` အဖြေထွက်ချင်းသည် ၎င်း scope ထဲမှာရှိတဲ့ variable ကိုပဲ ဦးစားပေးပြီးတော့
+ယူသွားတာဖြစ်တဲ့အတွက်ကြောင့်ပဲ ဖြစ်ပါတယ်။ အဲ့ဒါဆိုရင် global variable ကို ပြန်ခေါ်သုံးချင်ရင် ဘယ်လိုခေါ်မလဲ -
+
+```java
+public class LocalVariableTest {
+
+    static String message = "Global Variable";
+
+    public static void showMessage(String message) {
+        System.out.println(message);
+    }
+
+    public static void doSomething() {
+        String message = "Do Something";
+        System.out.println(LocalVariableTest.message);
+    }
+
+    public static void main(String[] args) {
+        doSomething();
+    }
+}
+```
+
+Result
+
+```text
+Global Variable
+```
+
+Static Variable တွေကို ပြန်ခေါ်သုံးမယ်ဆိုရင်တော့ ၎င်း variable ရဲ့ owner ကိုသတ်မှတ်ပေးပြီးတော့ `.` ခံပြီးတော့ ၎င်း
+variable ကို ပြန်ခေါ်သုံးပေးရမှာပဲ
+ဖြစ်ပါတယ်။ `LocalVariableTest.message`ဆိုပြီးတော့ ပြန်ခေါ်သုံးပေးရမှာပဲ ဖြစ်ပါတယ်။ Local variable နဲ့ Global variable
+နှစ်ခုကို နာမည်တူပေးခဲ့ရင် Local Variable ရဲ့ တန်ဖိုးက Global Variable ရဲ့ တန်ဖိုးကို ဖုံးကွယ်စေနိုင်ပါတယ်။
+ထိုကဲ့သိုဖြစ်တာကို **Variable Hiding** ဖြစ်တယ်လို့ခေါ်ပါတယ်။
+
+```java
+public class LocalVariableTest {
+
+    String message = "Global Variable";
+
+    public void showMessage(String message) {
+        System.out.println(message);
+    }
+
+    public void doSomething() {
+        String message = "Do Something";
+        System.out.println(this.message);
+    }
+
+    public static void main(String[] args) {
+        LocalVariableTest obj = new LocalVariableTest();
+        obj.doSomething();
+    }
+}
+```
+
+Result
+
+```text
+Global Variable
+```
+
+Instance Variable & Object Variable တွေကို ပြန်ခေါ်သုံးမယ်ဆိုရင်တော့ ၎င်း object ရဲ့ owner ကို reference လုပ်တဲ့ `this`
+keyword ကို သုံးပြီးတော့ `this.message` ဆိုပြီတော့ ပြန်သုံးပေးရမှာပဲဖြစ်ပါတယ်။
