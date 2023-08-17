@@ -4,7 +4,7 @@ public class CounterTest {
         c1.countUp();
 
         Counter c2 = new Counter();
-//        c2.countUp();
+        c2.countUp();
 
         System.out.println("C1 Count is " + c1.count);
         System.out.println("C2 Count is " + c2.count);
