@@ -33,52 +33,52 @@ Java program တစ်ခုက JVM ရှိတဲ့ ဘယ် machine မှ�
 ## Java Editions
 
 - Java SE
-    - Java ဘာသာရပ်၏ အခြေခံ Edition
-    - Desktop Application များအား ရေးသားနိုင်
+  - Java ဘာသာရပ်၏ အခြေခံ Edition
+  - Desktop Application များအား ရေးသားနိုင်
 - Java EE
-    - Enterprise Java Application များအား ရေးသားရန် အခြေခံ Edition
+  - Enterprise Java Application များအား ရေးသားရန် အခြေခံ Edition
 - Java ME
-    - Embedded ပတ်ဝန်းကျင်များ အတွက် Java Edition
+  - Embedded ပတ်ဝန်းကျင်များ အတွက် Java Edition
 
 ## In This Course
 
 - Java Basic
-    - Language Fundamentals
-        - Basic Structure of a Class
-        - Java Data Types
-        - Identifis and Madifiers
-        - Statements
+  - Language Fundamentals
+    - Basic Structure of a Class
+    - Java Data Types
+    - Identifis and Madifiers
+    - Statements
+  - OOP
     - OOP
-        - OOP
-        - Class & Interfaces
-        - Enum & Annotations
-        - Generics
-    - Essential API
-        - Exceptions
-        - Numbers
-        - Strings
-        - Date & Calendar
-        - Collections
-        - Java IO
-        - Nio 2
-        - Threads
-        - Concurrency
-    - Functional Style
-        - Lambda Expression
-        - Streams API
-        - Functional Programming
-        - Functional Interfaces
+    - Class & Interfaces
+    - Enum & Annotations
+    - Generics
+  - Essential API
+    - Exceptions
+    - Numbers
+    - Strings
+    - Date & Calendar
+    - Collections
+    - Java IO
+    - Nio 2
+    - Threads
+    - Concurrency
+  - Functional Style
+    - Lambda Expression
+    - Streams API
+    - Functional Programming
+    - Functional Interfaces
 - Database
-    - Relational Database
-    - Data Modeling
-    - Simple SQL
-    - JDBC API
+  - Relational Database
+  - Data Modeling
+  - Simple SQL
+  - JDBC API
 - GUI
-    - Scene Graph
-    - Layouts
-    - Controls
-    - Styles and Effects
-    - Animations
+  - Scene Graph
+  - Layouts
+  - Controls
+  - Styles and Effects
+  - Animations
 
 ## Basic Structure of a Class
 
@@ -106,7 +106,7 @@ class တွေကနေ တစ်ဆင့် object တွေကို တည�
 class declaration components
 
 |    Name    |    Descriptions     |   Status   |
-|:----------:|:-------------------:|:----------:|
+| :--------: | :-----------------: | :--------: |
 |   public   |   Access modifier   |  Optional  |
 |   final    | Non-Access modifier |  Optional  |
 |   class    |    Keyword class    | Compulsory |
@@ -155,7 +155,7 @@ $ java Person Hello
 
 ```bash
 $ java Person Hello World
-``` 
+```
 
 ဒီနေရာမှာဆိုရင်တော့ Hello World သည် line တစ်ခုစီဖြင့်ထွက်လာမှာပဲ ဖြစ်ပါတယ်။ ဘာဖြစ်လို့လဲ ဆိုတော့ Hello နဲ့ World ဆိုတဲ့
 command နှစ်ခုကြားမှာ space ပါနေတဲ့အတွက်ကြောင့် command နှစ်ခုလို့ သတ်မှတ်တာဖြစ်တဲ့အတွက်ကြောင့် Hello အသည် line 1
@@ -414,8 +414,8 @@ Variable တွေ declare လုပ်ထားတဲ့ နေရာပေါ�
 အမျိုးအစားနှစ်မျိုးခွဲနိုင်ပါတယ်။
 
 - Global Variables
-    - Static Variables
-    - Instance Variables
+  - Static Variables
+  - Instance Variables
 - Local Variables
 
 ## Global Variables
@@ -460,4 +460,3 @@ public class Variable {
 
 Datatype ရဲ့ အရှေ့မှာ static ရေးထားတဲ့ အတွက်ကြောင့် ၎င်း variable သည် object variable အနေနဲ့ အသုံးမပြုပဲ class ထဲမှာပဲ
 အသုံးပြုတဲ့အတွက်ကြောင့် Static Variable လို့ခေါ်ပါတယ်။
-
