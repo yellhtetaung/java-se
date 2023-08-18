@@ -716,4 +716,125 @@ Variable တွေရဲ့ Identifier နာမည်တွေနဲ့ JVM န
 နာမည်တူတဲ့ variable နှစ်ခုကို ရေးလို့မရပါဘူး။ scope မတူရင်တော့ နာမည်တူတဲ့ variable နှစ်ခုကို ရေးလို့ရပါတယ်။
 အဲ့အခါမှာတော့ global scope ထဲမှာရှိတဲ့ variable ကို local scope ထဲမှာရှိတဲ့ variable က hide လုပ်သွားပြီတော့ Variable
 Hiding ဖြစ်စေနိုင်ပါတယ်။ JVM နဲ့ Compiler က method တစ်ခုဖြစ်ပါတယ်ဆိုတာကို method name နဲ့ သူနဲ့ပါလာတဲ့ argument list ကို
-ကြည့်ပြီးတော့ method တစ်ခုဖြစ်ပါတယ်လို့ သတ်မှတ်ပါတယ်။
+ကြည့်ပြီးတော့ method တစ်ခုဖြစ်ပါတယ်လို့ သတ်မှတ်ပါတယ်။ နာမည်တူပြီးတော့ argument မတူနဲ့ method တွေကို java မှာ
+ရေးလို့ရပါတယ်။ Java Compiler နဲ့ JVM က argument type တွေကိုပဲ ကြည့်ပြီးတော့ ဆုံးဖြတ်တာပဲ ဖြစ်ပါတယ်။
+
+```java
+public class SameNameMethods {
+    public static void main(String[] args) {
+    }
+
+    static void method1() {
+    }
+
+    static void method1(int i) {
+    }
+}
+```
+
+Method နဲ့ Argument List ကို ဖော်ပြတဲ့အရာကို java မှာ Method signature လို့ ခေါ်ပါတယ်။ နာမည်တူပြီး argument မတူတဲ့
+method ရေးသားနည်းကို java မှာ method overloading လို့ခေါ်ပါတယ်။
+
+## Constructors
+
+### Write
+
+- Constructor များသည် Object ဆောက်သည့် အခါတွင် အသုံးပြုမည့် Special Method တစ်မျိုး
+- Constructor အမည်ကို Class အမည်နဲ့ ထပ်တူ ရေးသားရမည်
+- Argument တွေကို မရေးသားပဲ နေနိုင်သလို၊ လိုအပ်ပါက ရေးသားနိုင်ပါသည်
+- Return Type အား ရေးသားရန်မလိုအပ်ပါ
+
+### Default Constructor
+
+- အကယ်၍ Class တစ်ခုအတွင်းတွင် Constructor အား ရေးသားထားခြင်းမရှိပါက၊ compiler မှ အလိုလျှောက် Default Constructor အား
+  ဖြည့်စွက်ပေးမည် ဖြစ်ပါသည်။
+- အကယ်၍ Class အတွင်းတွင် Constructor တစ်ခုအား ရေးသားထားပါက Default Constructor အား အသုံးပြုနိုင်တော့မည် မဟုတ်ပေ။
+- Argument ပါတဲ့ Constructor ကို ရေးသားလိုက်တဲ့အခါမှာ Default Constructor ကို ဖုံးကွယ်စေတဲ့အတွက် Argument မပါတဲ့
+  Constructor ကို အသုံးပြုလိုပါက ဖြည့်စွက်ရေးသားရန် လိုအပ်ပါသည်။
+
+Constructor တွေသည် object တွေရဲ့ instance variable တွေကို initialize လုပ်ပေးနိုင်ပါတယ်။
+
+- Car.java
+
+```java
+public class Car {
+    String type;
+    String model;
+
+    Car(String type, String model) {
+        this.type = type;
+        this.model = model;
+    }
+
+    void showInfo() {
+        System.out.println("Type : " + type);
+        System.out.println("Model : " + model);
+    }
+}
+```
+
+- CarTest.java
+
+```java
+public class CarTest {
+    static public void main(String[] args) {
+        Car car = new Car("Caldina", "2016");
+        car.showInfo();
+    }
+}
+```
+
+Constructor Overwriting
+
+```java
+public class Car {
+    String type;
+    String model;
+
+    Car(String type, String model) {
+        this.type = type;
+        this.model = model;
+    }
+
+    Car(String str, boolean isType) {
+        if (isType) {
+            this.type = str;
+        } else {
+            this.model = str;
+        }
+    }
+
+    Car() {
+    }
+
+
+    void showInfo() {
+        System.out.println("Type : " + type);
+        System.out.println("Model : " + model);
+    }
+}
+```
+
+## Packages
+
+- File System ထဲမှာရှိတဲ့ Directory နဲ့ သဘောထားချင်းတူပါတယ်။
+- အမည်တူသော Class များအား **Package** သုံးပြီးတော့ ကွဲပြားအောင်လုပ်နိုင်ပါတယ်။
+- လုပ်ဆောင်မှုအလိုက် **Package** ကို အသုံးပြုပြီးတော့ တစ်နေရာတည်းမှာ စုစည်းပေးနိုင်ပါတယ်။
+
+> [day-03/com/jdc/teaching/Course.java](./day-03/com/jdc/teaching/Course.java)
+
+```java
+package com.jdc.teaching;
+
+public class Course {
+}
+```
+
+> [day-03/com/jdc/registration/Student.java](./day-03/com/jdc/registration/Student.java)
+
+```java
+package com.jdc.registration;
+
+public class Student {
+}
+```
