@@ -33,52 +33,12 @@ Java program တစ်ခုက JVM ရှိတဲ့ ဘယ် machine မှ�
 ## Java Editions
 
 - Java SE
-    - Java ဘာသာရပ်၏ အခြေခံ Edition
-    - Desktop Application များအား ရေးသားနိုင်
+  - Java ဘာသာရပ်၏ အခြေခံ Edition
+  - Desktop Application များအား ရေးသားနိုင်
 - Java EE
-    - Enterprise Java Application များအား ရေးသားရန် အခြေခံ Edition
+  - Enterprise Java Application များအား ရေးသားရန် အခြေခံ Edition
 - Java ME
-    - Embedded ပတ်ဝန်းကျင်များ အတွက် Java Edition
-
-## In This Course
-
-- Java Basic
-    - Language Fundamentals
-        - Basic Structure of a Class
-        - Java Data Types
-        - Identifiers and Modifiers
-        - Statements
-    - OOP
-        - OOP
-        - Class & Interfaces
-        - Enum & Annotations
-        - Generics
-    - Essential API
-        - Exceptions
-        - Numbers
-        - Strings
-        - Date & Calendar
-        - Collections
-        - Java IO
-        - Nio 2
-        - Threads
-        - Concurrency
-    - Functional Style
-        - Lambda Expression
-        - Streams API
-        - Functional Programming
-        - Functional Interfaces
-- Database
-    - Relational Database
-    - Data Modeling
-    - Simple SQL
-    - JDBC API
-- GUI
-    - Scene Graph
-    - Layouts
-    - Controls
-    - Styles and Effects
-    - Animations
+  - Embedded ပတ်ဝန်းကျင်များ အတွက် Java Edition
 
 ## Basic Structure of a Class
 
@@ -416,8 +376,8 @@ Variable တွေ declare လုပ်ထားတဲ့ နေရာပေါ�
 အမျိုးအစားနှစ်မျိုးခွဲနိုင်ပါတယ်။
 
 - Global Variables
-    - Static Variables
-    - Instance Variables
+  - Static Variables
+  - Instance Variables
 - Local Variables
 
 ## Global Variables
@@ -622,8 +582,8 @@ keyword ကို သုံးပြီးတော့ `this.message` ဆို�
 
 - Method များအား၊ အသုံးချလုပ်ဆောင်ချက်များနှင့် Object တွေရဲ့ Behaviour များအား ဖော်ပြရာတွင် အသုံးပြုပါသည်။
 - Method တစ်ခုအား ရေးရာတွင် အောက်ပါအချက်များအား စဥ်းစားထားရပါမည်။
-    - ထို Method အား အသုံးပြု၍ ဘာပြန်ရနိုင်သလဲ (Return Type)
-    - Method အား အလုပ်လုပ်စေရန် ဘာပေးရမှာလဲ။ (Arguments)
+  - ထို Method အား အသုံးပြု၍ ဘာပြန်ရနိုင်သလဲ (Return Type)
+  - Method အား အလုပ်လုပ်စေရန် ဘာပေးရမှာလဲ။ (Arguments)
 
 ### Writing Method
 
